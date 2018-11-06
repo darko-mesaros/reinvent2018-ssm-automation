@@ -1,0 +1,56 @@
+{
+  "description": "Restart EC2 instances(s) and notify manager",
+  "schemaVersion": "0.3",
+  "assumeRole": "{{ AutomationAssumeRole }}",
+  "parameters": {
+    "InstanceId": {
+      "type": "StringList",
+      "description": "(Required) EC2 Instance(s) to restart"
+    },
+    "AutomationAssumeRole": {
+      "type": "String",
+      "description": "(Optional) The ARN of the role that allows Automation to perform the actions on your behalf.",
+      "default": ""
+    }
+  },
+  "mainSteps": [
+    {
+      "name": "SendEmailToManager2",
+      "action": "aws:executeAwsApi",
+      "inputs": {
+        "Service": "sns",
+        "Api": "Publish",
+        "Message": "Instance is about to be restarted.",
+        "TopicArn": "",
+        "Subject": "PENDING - Restart Notification of instance"
+      }
+    },
+    {
+      "name": "stopInstances",
+      "action": "aws:changeInstanceState",
+      "inputs": {
+        "InstanceIds": "{{ InstanceId }}",
+        "DesiredState": "stopped"
+      }
+    },
+    {
+      "name": "startInstances",
+      "action": "aws:changeInstanceState",
+      "inputs": {
+        "InstanceIds": "{{ InstanceId }}",
+        "DesiredState": "running"
+      }
+    },
+    {
+      "name": "SendEmailToManager",
+      "action": "aws:executeAwsApi",
+      "inputs": {
+        "Service": "sns",
+        "Api": "Publish",
+        "Message": "Instance has been restarted.",
+        "TopicArn": "",
+        "Subject": "COMPLETED - Restart Notification of instance"
+      }
+    }
+  ]
+}
