@@ -18,6 +18,7 @@ By default, Systems Manager doesn't have permission to perform actions on your i
 
 1.	Open the IAM console at https://console.aws.amazon.com/iam/.
 2.	In the navigation pane, choose **Roles**, and then choose Create **role**.
+
 ![iam_roles](images/IAMRoles.png)
 3.	On the Select type of trusted entity page, under AWS Service, choose **EC2**, and then choose **Next: Permissions**.
 4.	On the Attached permissions policy page, find and add **AmazonEC2RoleforSSM** policy, and then choose **Next: Review**.
