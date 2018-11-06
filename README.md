@@ -17,12 +17,20 @@ Use either **AWS-RestartEC2Instance, AWS-StopEC2Instance or AWS-StartEC2Instance
 By default, Systems Manager doesn't have permission to perform actions on your instances. You must grant access by using an IAM instance profile. Complete the following steps to create an IAM instance profile role with Systems Manager permissions.
 
 1.	Open the IAM console at https://console.aws.amazon.com/iam/.
+
 2.	In the navigation pane, choose **Roles**, and then choose Create **role**.
 
 ![iam_roles](images/IAMRoles.png)
+
 3.	On the Select type of trusted entity page, under AWS Service, choose **EC2**, and then choose **Next: Permissions**.
+
+![iam_roles](images/IAMRoles.png)
+
 4.	On the Attached permissions policy page, find and add **AmazonEC2RoleforSSM** policy, and then choose **Next: Review**.
+
 5.	On the Review page, type a name in the Role name box, and optionally type a description. Then choose **Create role**. In the example below role name is **builder1ec2role**.
+
+![iam_roles](images/IAMRoles.png)
 
 ### To create an instance that uses the Systems Manager instance profile
 Ensure you have at least two Amazon EC2 instances.	
