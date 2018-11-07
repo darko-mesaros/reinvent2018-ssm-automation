@@ -68,12 +68,28 @@ Ensure you have at least two Amazon EC2 instances.
 ### Create a Resource Group
 
 1.	Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/.
+
 2.	In the left navigation pane, under **Resource Groups**, choose **Saved Resource Group**.
+
+![rg_saved](images/RGSaved.png)
+
 3.	In the menu bar, choose **Create resource group**.
+
+![rg_create](images/RGCreate.png)
+
 4.	In the dropdown list for **Select resource types**, choose **AWS::EC2::Instance**.
+
 5.	Type in the Tag key and value of the tag created on the EC2 Managed Instance. In the example, Tag key is **environment** and value is **builder**. Choose the **+** button to add the tag.
+
+![rg_tag](images/RGTag.png)
+
 6.	In the **Group details** section, fill in the Group name, in my example Group name is **Builder1-AllManagedEC2Instances**. 
+
+![rg_group](images/RGGroup.png)
+
 7.	Choose **Create group**.
+
+![rg_creategroup](images/RGCreateGroup.png)
 
 ### Execute Automation Document
 
