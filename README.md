@@ -93,15 +93,48 @@ Ensure you have at least two Amazon EC2 instances.
 
 ### Execute Automation Document
 
-1.	Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/ .
+1.	Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/.
+
 2.	In the left navigation pane, choose **Automation**.
+
+![at_actions](images/AT-Actions.png)
+
 3.	On the menu bar, choose **Execute Automation**.
+
+![at_execute](images/AT-Execute.png)
+
 4.	In the Automation document list, Use either the Search bar or the numbers to the right of the Search bar to find the Automation document named **AWS-RestartEC2Instance**.
+
+![at_document](images/AT-Document.png)
+
 5.	Select the Automation document **AWS-RestartEC2Instance**. Then, under **Document details**, select **Default version at runtime** as the Document version and under **Execution Mode**, select **Execute the entire automation at once**. 
+
+![at_documentdetails](images/AT-DocumentDetails.png)
+
 6.	In the Targets and Rate Control section, choose **Enable targets and rate control**.
-7.	Under Targets, for Targets select **Resource Group**, for Parameter select **InstanceId**, and then for Resource Group select the **Resource Group** you created as part of the prerequisites. 
-8.	Under **Concurrency**, select to **1** target at a given time. 
+
+![at_targetratecontrol](images/AT-TargetRateControl.png)
+
+7.	Under Targets, for Targets select **Resource Group**, for Parameter select **InstanceId**, and then for Resource Group select the **Resource Group** you created as part of the prerequisites.
+
+![at_resourcegroup](images/AT-ResourceGroup.png)
+
+8.	Under **Concurrency**, select to **1** target at a given time.
+
+![at_concurrency](images/AT-Concurrency.png)
+
 9.	Under **Error threshold**, select percentage, then **100**.
+
+![at_error](images/AT-Error.png)
+
 10.	Now we ready to run the Automation document, choose **Execute Automation**.
+
+![at_executeautomation](images/AT-ExecuteAutomation.png)
+
 11.	You should now see, Automation execution has been initiated and in progress. 
+
+![at_inprogress](images/AT-InProgress.png)
+
 12.	Automation execution has successfully completed. 
+
+![at_success](images/AT-Success.png)
