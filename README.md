@@ -35,19 +35,39 @@ By default, Systems Manager doesn't have permission to perform actions on your i
 ### To create an instance that uses the Systems Manager instance profile
 Ensure you have at least two Amazon EC2 instances.	
 
-1.	Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/ .
+1.	Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
 2.	Choose **Launch Instance**.
+
+![ec2_Launch](images/EC2Launch.png)
+
 3.	On the **Choose an Amazon Machine Image (AMI)** page, locate the AMI for the instance type you want to create, and then choose **Select**. In the example I selected **Microsoft Windows Server 2016 Base**.
+
+![ec2_windowsami](images/EC2WindowsAmi.png)
+
 4.	Choose **Next: Configure Instance Details**.
+
+![ec2_nextconfigure](images/EC2NextConfigure.png)
+
 5.	On the **Configure Instance Details** page, in the IAM role drop-down list, choose the instance profile you previously created, in the example the instance profile is **builder1ec2role**. Then choose **Next: Add Storage**.
+
+![ec2_iamrole](images/EC2IAMRole.png)
+
 6.	Choose **Next: Add Tags**.
+
 7.	On the **Add Tags** page, choose **Add Tag**.
+
+![ec2_addtag](images/EC2Tag.png)
+
 8.	Fill in the **Key** and **Value** for your tag. In the example, Key is set to **environment** and Value set to **builder1**.
+
+![ec2_addtag](images/EC2AddTag.png)
+
 9.	Complete the remaining steps in the wizard.
 
 ### Create a Resource Group
 
-1.	Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/ .
+1.	Open the AWS Systems Manager console at https://console.aws.amazon.com/systems-manager/.
 2.	In the left navigation pane, under **Resource Groups**, choose **Saved Resource Group**.
 3.	In the menu bar, choose **Create resource group**.
 4.	In the dropdown list for **Select resource types**, choose **AWS::EC2::Instance**.
