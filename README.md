@@ -111,7 +111,9 @@ Ensure you have at least two Amazon EC2 instances.
 
 ![at_documentdetails](images/AT-DocumentDetails.png)
 
-6. Choose **Rate control**. 
+6. Choose **Rate control**.
+
+![at_ratecontrol](images/AT-RateControl.png)
 
 7. Under Targets, for Parameter select **InstanceId**, and then for Resource Group select the **Resource Group** you created as part of the prerequisites.
 
