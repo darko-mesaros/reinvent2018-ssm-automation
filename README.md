@@ -113,17 +113,17 @@ Ensure you have at least two Amazon EC2 instances.
 
 6. Choose **Rate control**.
 
-![at_ratecontrol](images/AT-RateControl.png)
+![at_ratecontrol](images/AT-RateControl.PNG)
 
 7. Under Targets, for Parameter select **InstanceId**, and then for Resource Group select the **Resource Group** you created as part of the prerequisites.
 
 ![at_resourcegroup](images/AT-ResourceGroup.png)
 
-8. Under **Rate Control**, for **Concurrency**, select **1** as the target. Then for 
+8. Under **Rate Control**, for **Concurrency**, select **1** as the target.
 
 ![at_concurrency](images/AT-Concurrency.png)
 
-9. Under **Error threshold**, select errors, then **1**.
+9. Under **Error threshold**, select **1** as the errors.
 
 ![at_error](images/AT-Error.png)
 
