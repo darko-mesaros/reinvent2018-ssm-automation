@@ -107,27 +107,23 @@ Ensure you have at least two Amazon EC2 instances.
 
 ![at_document](images/AT-Document.png)
 
-5.	Select the Automation document **AWS-RestartEC2Instance**. Then, under **Document details**, select **Default version at runtime** as the Document version and under **Execution Mode**, select **Execute the entire automation at once**. 
+5.	Select the Automation document **AWS-RestartEC2Instance**. Then, under **Document details**, select **Default version at runtime** as the Document version and choose **Next**.
 
 ![at_documentdetails](images/AT-DocumentDetails.png)
 
-6.	In the Targets and Rate Control section, choose **Enable targets and rate control**.
+6. Choose **Rate control**. 
 
-![at_targetratecontrol](images/AT-TargetRateControl.png)
+7. Under Targets, for Parameter select **InstanceId**, and then for Resource Group select the **Resource Group** you created as part of the prerequisites.
 
-7.	Under Targets, for Targets select **Resource Group**, for Parameter select **InstanceId**, and then for Resource Group select the **Resource Group** you created as part of the prerequisites.
-
-![at_resourcegroup](images/AT-ResourceGroup.png)
-
-8.	Under **Concurrency**, select to **1** target at a given time.
+8. Under **Rate Control**, for **Concurrency**, select **1** for the target.
 
 ![at_concurrency](images/AT-Concurrency.png)
 
-9.	Under **Error threshold**, select percentage, then **100**.
+9. Under **Error threshold**, select errors, then **1**.
 
 ![at_error](images/AT-Error.png)
 
-10.	Now we ready to run the Automation document, choose **Execute Automation**.
+10.	Now we ready to run the Automation document, choose **Execute**.
 
 ![at_executeautomation](images/AT-ExecuteAutomation.png)
 
