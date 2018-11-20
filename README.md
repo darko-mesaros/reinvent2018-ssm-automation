@@ -117,7 +117,9 @@ Ensure you have at least two Amazon EC2 instances.
 
 7. Under Targets, for Parameter select **InstanceId**, and then for Resource Group select the **Resource Group** you created as part of the prerequisites.
 
-8. Under **Rate Control**, for **Concurrency**, select **1** for the target.
+![at_resourcegroup](images/AT-ResourceGroup.png)
+
+8. Under **Rate Control**, for **Concurrency**, select **1** as the target. Then for 
 
 ![at_concurrency](images/AT-Concurrency.png)
 
